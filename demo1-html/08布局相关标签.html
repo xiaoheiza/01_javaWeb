@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="background-color: cadetblue">
+    <!-- 
+        CSS 设置样式的
+            通过元素的style属性进行设置
+            style = "样式名：样式值；样式名：样式值；"
+        
+        块元素和行元素的区别：
+        块元素：自己独占一行的元素。块元素的CSS样式的宽、高等等往往都是生效的
+          div
+        行内元素：不会自己独占一行的元素。行内的CSS样式的宽、高等等很多都是不生效的。因此不适合做布局
+          作用：界定CSS样式的显示范围
+          span
+     -->
+    <div
+      style="
+        border: 1px solid red;
+        width: 500px;
+        height: 200px;
+        margin: 10px auto;
+        background-color: bisque;
+      "
+    >
+      123
+    </div>
+
+    <div
+      style="
+        border: 1px solid red;
+        width: 500px;
+        height: 200px;
+        margin: 10px auto;
+      "
+    >
+      456
+    </div>
+    <div
+      style="
+        border: 1px solid red;
+        width: 500px;
+        height: 200px;
+        margin: 10px auto;
+      "
+    >
+      789
+    </div>
+    <span style="border: 1px solid green; width: 500px; margin: 10px auto"
+      >555</span
+    >
+    <div
+      style="
+        border: 1px solid red;
+        width: 500px;
+        height: 200px;
+        margin: 10px auto;
+      "
+    >
+      <span style="font-size: 30px; color: aqua">行内元素</span>
+      ：不会自己独占一行的元素。行内的CSS样式的宽、高等等很多都是不生效的。因此不适合做布局
+    </div>
+  </body>
+</html>

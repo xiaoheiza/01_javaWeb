@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 
+        table 整张表格
+            thead 表头(可以不行thead tbody tfoot 浏览器则在tr外面自动加上tbody)
+            tbody 表体
+            tfoot 表尾
+                tr 表格中的一行
+                    td 行中的一个单元格
+                    th 自带加粗居中效果的td
+        1、跨行合并 th 的rowspan属性设置为3就是3行合并
+        1、跨列合并 th 的colspan属性设置为2就是2列合并
+     -->
+    <h3 style="text-align: center">员工技能竞赛评分表</h3>
+    <table border="1px" style="margin: 0px auto; width: 300px;">
+      <thead>
+        <tr>
+          <th>排名</th>
+          <th>姓名</th>
+          <th>分数</th>
+          <th>备注</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>张小明</td>
+          <td>100</td>
+          <td rowspan="6">前三名升职加薪</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>李小黑</td>
+          <td>99</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>张明</td>
+          <td>98</td>
+        </tr>
+        <tr>
+            <td>总人数</td>
+            <td colspan="2">200</td>
+        </tr>
+        <tr>
+            <td>平均分</td>
+            <td colspan="2">96</td>
+        </tr>
+        <tr>
+            <td>及格率</td>
+            <td colspan="2">80%</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
