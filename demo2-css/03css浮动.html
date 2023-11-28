@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*
+            使元素头里文档流，按照指定方向浮动。
+            可以使元素在同一行而不失去block的特性 
+         */
+        .outerDiv {
+            width: 500px;
+            height: 300px;
+            border: 1px solid green;
+            background-color: rgb(204, 204, 24);
+        }
+        .innerDiv{
+            width: 100px;
+            height: 100px;
+            border: 1px solid blue;
+            /*display: inline;    div的display值默认为block，即占一行！如果改为inline则为行内（然后其宽和高就不生效了，具体看demo1-html的布局相关标签.html）*/
+        }
+        .d1 {
+            background-color: greenyellow;
+            float: left;       /*在父级元素的最右边*/
+        }
+        .d2 {
+            background-color: rgb(233, 94, 94);
+        }
+        .d3 {
+            background-color: rgb(52, 182, 243);
+        }
+    </style>
+</head>
+<body>
+    <div class="outerDiv">
+        <div class="innerDiv d1">divA</div>
+        <div class="innerDiv d2">divB</div>
+        <div class="innerDiv d3">divC</div>
+    </div>
+</body>
+</html>
