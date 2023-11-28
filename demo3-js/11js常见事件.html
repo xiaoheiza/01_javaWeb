@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function fun1() {
+        console.log("单击啦");
+      }
+      function fun2() {
+        console.log("单击啦2");
+      }
+      function fun3() {
+        console.log("双击啦");
+      }
+      function fun4() {
+        console.log("鼠标悬停啦");
+      }
+      function fun5() {
+        console.log("鼠标移动啦");
+      }
+      function fun6() {
+        console.log("鼠标离开啦");
+      }
+      function fun7() {
+        console.log("键盘按下啦");
+      }
+      function fun8() {
+        console.log("键盘抬起啦");
+      }
+      /* 
+        1、事件的绑定方式
+            1、通过元素的属性绑定   on***
+            2、通过DOM编程动态绑定
+            注意事项：
+                1、一个事件可以同时绑定多个函数
+                2、一个元素可以同时绑定多个事件
+        2、常见的事件
+            1 鼠标事件  onclick ondbclick(双击) onmouseover(鼠标悬停)   onmousemove(鼠标移动) onmouseleave(鼠标离开)
+            2 键盘事件  onkeydown(键盘的按下) onkeyup（键盘的弹起）
+            3 表单事件  onfocus（鼠标点击输入框）onchange( 内容改变) onsubmit(表单提交时) onrest(表单重置时)
+            4 页面加载事件  onload
+        
+        3、事件的触发
+            1、行为的触发
+            2、DOM编程触发
+        */
+      function testFocus() {
+        console.log("获得焦点啦");
+      }
+      function testBlur() {
+        console.log("失去焦点啦");
+      }
+      function testChange(value) {
+        console.log("内容改变为" + value);
+      }
+      function testChange2(value) {
+        console.log("选项改变为：" + value);
+      }
+      function testsubmit() {
+        /* 
+        弹窗的三种方式
+            alert() 信息提示框
+            prompt() 信息输入框
+            confirm() 信息确认框,会返回一个布尔值
+        */
+        var flag = confirm("确认提交单表吗？");
+        if (!flag) {
+          // 在这里我们有机会阻止表单的提交
+          //   event.preventDefault(); // 阻止表单的提交
+          return false;
+        }
+        return true;
+      }
+      function testReset() {
+        alert("表单重置啦")
+      }
+    </script>
+  </head>
+  <body>
+    <form
+      action="./01js引入方式.html"
+      method="get"
+      onsubmit="return testsubmit()"
+      onreset="testReset()"  
+    >   <!-- 这里通过submit的return ture或者false也可以阻止表单的提交 -->
+      
+      用户昵称：<input
+        type="text"
+        name="realName"
+        onfocus="testFocus()"
+        onblur="testBlur()"
+        onchange="testChange(this.value)"
+      />
+      <br />
+      登陆账号：<input type="text" name="loginName" /> <br />
+      选择籍贯：
+      <select onchange="testChange2(this.value)">
+        <option value="1">北京</option>
+        <option value="2">上海</option>
+        <option value="3">广州</option>
+      </select>
+      <input type="submit" value="注册" />
+      <input type="reset" value="清空" />
+    </form>
+
+    <hr />
+    <input
+      type="button"
+      value="按钮"
+      onclick="fun1(), fun2()"
+      ondblclick="fun3()"
+    />
+    <br />
+    <img
+      src="img/apt.jpg"
+      onmouseover="fun4()"
+      onmousemove="fun5()"
+      onmouseleave="fun6()"
+    />
+    <br />
+    <input type="text" onkeydown="fun7()" onkeyup="fun8()" />
+  </body>
+</html>

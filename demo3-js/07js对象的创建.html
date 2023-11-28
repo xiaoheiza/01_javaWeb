@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      /* 
+        创建对象的方法
+            1、方法时1 new Object()
+
+            2、方式2    {属性名：属性值，...: ..., 函数名：function() {}}
+        */
+      var person = new Object();
+      //对象的属性？添加属性
+      person.name = "张三"; // 没有该属性则添加，有则赋值
+      person.age = 14;
+      //对象的方法？添加方法
+      person.eat = function (food) {
+        console.log(this.age + "岁的" + this.name + "正在吃" + food);
+      };
+
+      // 访问属性
+      console.log(person.name);
+      console.log(person.age);
+      person.eat("火锅");
+
+      var person2 = {
+        name: "李四",       //其实前面的属性名可以加双引号
+        age: 10,
+        eat: function (food) {
+          console.log(this.age + "岁的" + this.name + "正在吃" + food);
+        },
+      };
+
+      console.log(person2.name);
+      console.log(person2.age);
+      person2.eat("火锅");
+    </script>
+  </head>
+  <body></body>
+</html>

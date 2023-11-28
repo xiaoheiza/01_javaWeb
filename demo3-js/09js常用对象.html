@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      /* 
+        常见对象
+            1、数组
+                1）数组的创建方式
+                2）数组的API
+        */
+      /* //    var arr = new Array()
+      //    var arr = new Array(5)    // 指定长度
+      //    var arr = new Array(1, 2, 3) // 指定元素
+      var arr = [1, 2, 3];
+      console.log(arr);
+      console.log(arr.length);
+      // 向数组中添加数据
+      arr[0] = "张三"; // 数组中的数据类型可以不一致
+      arr[1] = 10;
+      arr[9] = true;
+      arr.length = 20;
+      console.log(arr);
+      console.log(arr.length); */
+
+      var fruits = ["apple", "banana", "orange"];
+      var fruits2 = ["荔枝", "桃子", "荔枝", "苹果"];
+      var fruitsAll = fruits.concat(fruits2); // 合并数组，但不改变原有数组
+      console.log(fruitsAll);
+      var res = fruitsAll.pop(); // 返回并删除最后一个元素
+      console.log(res);
+      console.log(fruitsAll);
+      var newLength = fruitsAll.push("榴莲"); //在最后增加一个元素，并返回最新长度
+      console.log(newLength);
+      console.log(fruitsAll);
+      var index1 = fruitsAll.indexOf("荔枝");
+      var index2 = fruitsAll.lastIndexOf("荔枝");
+      console.log(index1);
+      console.log(index2);
+      // 翻转数组的顺序
+      fruitsAll.reverse();
+      console.log(fruitsAll);
+      // 转换为字符串
+      console.log(fruitsAll.join("-"));
+      // 截取数组
+      console.log(fruitsAll.slice(2, 4));
+      // 从数组中添加或删除元素。从第一个参数开始删除第二个参数个数的元素，并添加第三个参数开始和后面参数的值
+      console.log(fruitsAll);
+      //   fruitsAll.splice(2, 0, 'el1', 'el2')
+      //   console.log(fruitsAll)
+    //   fruitsAll.splice(2, 2);
+    //   console.log(fruitsAll);
+      fruitsAll.splice(2, 2, 'el1', 'el2');
+      console.log(fruitsAll);
+    </script>
+  </head>
+  <body></body>
+</html>

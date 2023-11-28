@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+        if
+            1、非空字符串会判断位true。空字符串：''
+            2、非空对象 会判断为true
+            3、非0的number，也会判断为true
+        switch
+
+        */
+        //根据月份输出季节
+/*         var monthStr = prompt("请输入月份：")  //弹窗让你输入一个值，以string类型返回的
+        var month = Number.parseInt(monthStr)   // 转换为数字
+        if(month == 12 || month == 1 || month == 2) {
+            console.log("大约在冬季")
+        }else {
+            console.log("大约不在冬季")
+        } */
+        
+        /* if(3) {
+            console.log(true)
+        } else {
+            console.log(false)
+        } */
+        var monthStr = prompt("请输入月份：")
+        var month = Number.parseInt(monthStr)
+        switch(month) {
+            case 3:
+            case 4:
+            case 5:
+                console.log("春季");
+                break;
+            default:
+                console.log("other")
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
