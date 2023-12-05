@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      /* 
+        1、获取document dom树
+            window.document
+        2、从document中获取要操作的元素
+            1）直接获取
+            2）间接获取
+        3、对元素进行操作
+            1）操作元素的属性   语法：元素.属性 = ""
+            2）操作元素的样式   语法 元素.style.样式名 = "" 
+            3）操作元素的文本   语法：元素.innerText    元素.innerHTML(会改变整个的html)
+            4）增删元素
+         */
+         function changeAttribute() {
+            var el = document.getElementById("in1")
+            // 语法：元素.属性 = 属性值
+            console.log(el.type)
+            console.log(el.value)
+            el.type = "button"
+            el.value = "海"
+         }
+
+         function changeStyle() {
+            var el = document.getElementById("in1")
+            // 语法 元素.style.样式名 = ""      原始样式中的"-"要改为驼峰式
+            el.style.color = "green"
+            el.style.borderRadius = "10px"
+         }
+
+         function changeText() {
+            var div = document.getElementById("div1")
+            div.innerText = "嗨"
+         }
+
+         function changeHTML() {
+            var div = document.getElementById("div1")
+            div.innerHTML = "<h1>嗨<h1/>"
+         }
+         
+        
+    </script>
+    <style>
+        #in1 {
+            color: red;
+        }
+    </style>
+  </head>
+  <body>
+    <input id="in1" type="text" value="hello" >
+    <div id="div1">hello</div>
+    <hr>
+    <button onclick="changeAttribute()">操作属性</button>
+    <button onclick="changeStyle()">操作样式</button>
+    <button onclick="changeText()">操作文本</button>
+    <button onclick="changeHTML()">操作html</button>
+  </body>
+</html>
