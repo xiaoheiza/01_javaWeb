@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // 1、let不能重复声明
+      var i = 10;
+      var i = "";
+      let j = 10;
+      // let j = 'zhangsan'
+      // 2、let有块级作用域，非函数的花括号遇见let会有块级作用域
+      {
+        var i1 = 10;
+        var j1 = 20;
+        console.log(j1);
+      }
+      console.log(i1);
+      // 3、let不会预解析进行变量提升
+      /*         console.log(a)
+        var a = 10
+        console.log(b)
+        let b = 10  // 会报错 */
+
+      // 4、let定义的全局变量不会作为window的属性
+      var a = 10; // a会变为window对象的属性
+      console.log(window.a);
+      let b = 10;
+
+      // 5、const就是不能修改的let，并且必须有初始值
+      //但可以这样
+      const fruits = ["apple", "banana"];
+      fruits.push("orange");
+
+      // 6、模板字符按(``)：解决字符串换行和字符串拼接问题。java中是三个双引号
+      /* "" ''  处理字符串不支持多行*/
+      let city = '北京'
+      let str = `<ul>
+                    <li>${city}</li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>`;
+    </script>
+  </head>
+  <body>
+    <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </body>
+</html>

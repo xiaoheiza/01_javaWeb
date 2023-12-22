@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let arr = [11, 22, 33, 44]
+        // 使用结构表达式，取出数组中的元素。多个赋值
+        // 没有则为undefined
+        let [a, b, c, d, e = 10] = arr
+        console.log(a, b, c, d, e)
+
+
+        let person = {
+            name: "zhangsan",
+            age: 10
+        }
+
+        let {name, age} = person  // 必须和属性的变量名相同
+        console.log(name, age)
+
+        // 结构表达式用在方法的参数列表
+        function showArr([a, b, c, d]) {
+            console.log(a, b, c, d)
+        }
+        showArr(arr)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+/*         let arr = [1, 2, 3]
+        // 浅拷贝
+        let arr2 = arr
+        arr[0] = 100
+        console.log(arr2) */
+
+
+        // 深拷贝 
+        let arr = [1, 2, 3]
+        let person = {name: 'zhangsan'}
+
+        let arr3 = [...arr]     // 结构表达式
+        arr[0] = 100
+        console.log(arr3)
+        let person2 = {...person}
+        person.name='wangwu '
+        console.log(person2)
+
+        // 深拷贝方式2：字符串转换
+        let person3 = JSON.parse(JSON.stringify(person))
+        person.name='lisi'
+        console.log(person3)
+
+    </script>
+</head>
+<body>
+</body>
+</html>
